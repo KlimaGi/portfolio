@@ -1,14 +1,95 @@
-.top {
-  height: 20rem;
-}
-img {
-  height: 2rem;
-}
-.logo {
-  padding: 1rem;
-  margin-left: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
+/* ********** logo *********** */
+.logo-d {
+  color: #718b8e50;
+  font-size: 29px;
+  position: absolute;
+  z-index: -1;
+  left: -6px;
+  top: 2px;
+}
+.logo-g {
+  color: #125f69e1;
+  position: absolute;
+  z-index: 1;
+}
+.madedLogo {
+  font-weight: 800;
+  font-size: 25px;
+  position: relative;
+  margin: 2rem;
+  height: 2rem;
+  width: 30%;
+  border: 1px solid #125f69e1;
+}
+
+/* ************* img box *********** */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgb(187, 202, 214, 0.5),
+    rgb(37, 75, 105, 0.7)
+  );
+  z-index: -5;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  right: 2rem;
+  border: 1px solid #125f69e1;
+}
+
+/* **** img  style *** */
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid darkblue;
+}
+.hero {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.headline {
+  position: absolute;
+  top: 85%;
+  left: 15%;
+  font-size: 3rem;
+  transform: translate(-20%, -70%);
+  z-index: 5;
+}
+.hero::after {
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+}
+
+/* *********** box with border lines *********** */
 .box_lines {
   margin: 2rem auto;
   height: 50%;
@@ -20,6 +101,7 @@ img {
   position: relative;
   z-index: 2;
   padding: 5px;
+  font-weight: 200;
 }
 .box_lines2 {
   margin: 6rem auto;
@@ -35,7 +117,6 @@ img {
   z-index: -2;
 }
 .box_main {
-  /* border: 1px solid darkgray; */
   height: 20rem;
   width: 50%;
   margin: 0 auto;
