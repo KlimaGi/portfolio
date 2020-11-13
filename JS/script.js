@@ -5,7 +5,13 @@ const menu = document.querySelector(".menu");
 const headline = document.querySelector(".headline");
 
 const t1 = new TimelineMax();
-t1.fromTo(hero,1, {height: "0%"}, {height: "80%", ease: Power2.easeInOut});
+t1.fromTo(hero,1.5, {height: "0%"}, {height: "80%", ease: Power2.easeIn})
+.fromTo(hero, 1.5, {width: "100%"}, {width: "80%", ease: Power2.easeOut})
+.fromTo(slider, 1.5, {x:"-100%"}, {x: "0%", ease: Power2.easeInOut}, "-=1.5")
+.fromTo(madedLogo, 0.7, {opacity:0, x:20}, {opacity:1, x:0}, "-=0.7")
+.fromTo(menu, 0.7, {opacity: 0, x:20}, {opacity:1, x:0}, "-=0.7")
+.fromTo(headline, 0.7, {opacity: 0, x:20}, {opacity:1, x:0}, "-=0.7")
+;
 // box lines style
 function scrollAppear(){
   var introText = document.querySelector('.intro_text');
